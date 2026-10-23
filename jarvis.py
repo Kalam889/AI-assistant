@@ -1,15 +1,19 @@
 from tools.applications import open_notepad, open_calculator
 
 from tools.system_info import tell_date, tell_time
-
+from tools.recognition import listen_for_command
+from tools.speech import speak
 print("JARVIS: System online.")
 while True:
     
-    command = input("You: ")
+    command = listen_for_command()
+    if command is None:
+        continue
+    print("You:", command)
     if command == "hello":
-        print("JARVIS: Hello! How can I help you?")
+        speak("Hello! How can I help you?")
     elif command == "status":
-        print("JARVIS: All systems are ready.")
+        speak("All systems are ready.")
     elif command == "time":
         tell_time()
     elif command == "date":
