@@ -23,7 +23,7 @@ def ask_ai(question):
                 }
             ]
         )
-        answer = response.choice[0].message.content
+        answer = response.choices[0].message.content
         return answer
     except Exception as error:
         print("JARVIS: AI request failed", error)
