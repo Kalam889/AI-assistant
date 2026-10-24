@@ -2,6 +2,7 @@ from tools.applications import open_notepad, open_calculator
 
 from tools.system_info import tell_date, tell_time
 from tools.speech import speak   
+from tools.ai_brain import ask_ai
 
 def handle_command(command):
     
@@ -21,5 +22,6 @@ def handle_command(command):
         print("JARVIS: Shutting down. Goodbye!")
         return "exit"
     else:
-        print("JARVIS: I don't understand that command yet.")
+        answer = ask_ai(command)
+        speak(answer)
     return None
