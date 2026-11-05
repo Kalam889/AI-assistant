@@ -3,7 +3,7 @@ from tools.applications import open_notepad, open_calculator
 from tools.system_info import tell_date, tell_time
 from tools.speech import speak   
 from tools.ai_brain import ask_ai
-
+from tools.applications import open_website
 def handle_command(command):
     
     if "hello" in command:
@@ -18,6 +18,9 @@ def handle_command(command):
         open_notepad()
     elif "open calculator" in command:
         open_calculator()
+    elif "open youtube" in command:
+       speak("Opening YouTube")
+       open_website("https://www.youtube.com")
     elif "exit" in command:
         print("JARVIS: Shutting down. Goodbye!")
         return "exit"

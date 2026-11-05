@@ -46,8 +46,6 @@ while True:
 
 
 
-
-
 # import datetime
 # import subprocess
 # print("JARVIS: Systems online. Type 'exit' to shut down.")
