@@ -1,5 +1,5 @@
 from tools.applications import open_notepad, open_calculator
-
+from tools.applications import open_applications
 from tools.system_info import tell_date, tell_time
 from tools.speech import speak   
 from tools.ai_brain import ask_ai
@@ -15,12 +15,19 @@ def handle_command(command):
     elif "date" in command:
         tell_date()
     elif "open notepad" in command:
-        open_notepad()
+        # open_notepad()
+        open_applications("notepad.exe")
     elif "open calculator" in command:
         open_calculator()
     elif "open youtube" in command:
        speak("Opening YouTube")
-       open_website("https://www.youtube.com")
+       open_applications("agimnkijcaahngcdmfeangaknmldooml")
+    elif "open gmail" in command:
+        speak("Opening Gmail")
+        open_applications("fmgjjmmmlfnkbppncabfkddbjimcfncm")
+    elif "open chat gpt" in command:
+        speak("Opening chatGPT")
+        open_applications("cadlkienfkclaiaibeoongdcgmdikeeg")
     elif "exit" in command:
         print("JARVIS: Shutting down. Goodbye!")
         return "exit"
